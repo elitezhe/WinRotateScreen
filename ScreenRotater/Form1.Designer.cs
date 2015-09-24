@@ -30,6 +30,10 @@
         {
             this.buttonAntiClockwise = new System.Windows.Forms.Button();
             this.buttonClockwise = new System.Windows.Forms.Button();
+            this.buttonTest = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAntiClockwise
@@ -52,16 +56,51 @@
             this.buttonClockwise.UseVisualStyleBackColor = true;
             this.buttonClockwise.Click += new System.EventHandler(this.buttonClockwise_Click);
             // 
+            // buttonTest
+            // 
+            this.buttonTest.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonTest.Location = new System.Drawing.Point(135, 237);
+            this.buttonTest.Name = "buttonTest";
+            this.buttonTest.Size = new System.Drawing.Size(75, 23);
+            this.buttonTest.TabIndex = 2;
+            this.buttonTest.Text = "Test";
+            this.buttonTest.UseVisualStyleBackColor = true;
+            this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(12, 216);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(78, 16);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 126);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(222, 272);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.buttonClockwise);
             this.Controls.Add(this.buttonAntiClockwise);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,6 +108,9 @@
 
         private System.Windows.Forms.Button buttonAntiClockwise;
         private System.Windows.Forms.Button buttonClockwise;
+        private System.Windows.Forms.Button buttonTest;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

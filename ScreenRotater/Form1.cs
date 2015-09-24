@@ -117,5 +117,33 @@ namespace ScreenRotater
         {
             RotateAntiClockwise();
         }
+
+        private void buttonTest_Click(object sender, EventArgs e)
+        {
+            DEVMODE dm = NativeMethods.CreateDevmode();
+            GetSettings(ref dm);
+        }
+
+        private void switchBetween()
+        {
+            DEVMODE dm = NativeMethods.CreateDevmode();
+            GetSettings(ref dm);
+            
+            //Screen is horizontal
+            if (dm.dmPelsHeight < dm.dmPelsWidth)
+            {
+                RotateAntiClockwise();
+            }
+            else
+                RotateClockwise();
+           
+           
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            switchBetween();
+            this.Close();
+        }
     }
 }
